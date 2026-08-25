@@ -1,6 +1,12 @@
-# College ERP Management System
+# 🎓 College ERP Management System
 
-A full-stack College ERP Management System developed using React, ASP.NET Core Web API, and SQL Server.
+A full-stack College ERP Management System developed using React.js, ASP.NET Core Web API, Dapper, and SQL Server.
+
+## 📌 Project Overview
+
+The College ERP Management System is a web-based application designed to manage important college information such as students, departments, and courses.
+
+The system provides a user-friendly React frontend connected to an ASP.NET Core Web API backend and SQL Server database.
 
 ## 🚀 Technologies Used
 
@@ -8,14 +14,24 @@ A full-stack College ERP Management System developed using React, ASP.NET Core W
 - React.js
 - Vite
 - JavaScript
-- HTML
-- CSS
+- HTML5
+- CSS3
 
 ### Backend
 - ASP.NET Core Web API
 - C#
 - Dapper
-- SQL Server
+- REST API
+- Swagger / OpenAPI
+
+### Database
+- Microsoft SQL Server
+
+### Development Tools
+- Visual Studio 2022
+- Visual Studio Code
+- Git
+- GitHub
 
 ## ✨ Features
 
@@ -25,23 +41,18 @@ A full-stack College ERP Management System developed using React, ASP.NET Core W
 - Add, Edit and Delete operations
 - Search functionality
 - REST API integration
-- React frontend with ASP.NET Core backend
 - SQL Server database integration
+- Swagger API documentation
 
-## 📂 Project Structure
+## 🏗️ Project Architecture
 
 ```text
-College-ERP-Management-System
-│
-├── CollegeERP
-│   ├── Controllers
-│   ├── DTOs
-│   ├── Models
-│   ├── Repositories
-│   └── Program.cs
-│
-└── college-ui
-    ├── src
-    ├── public
-    ├── package.json
-    └── vite.config.js
+User
+  ↓
+React Frontend
+  ↓
+ASP.NET Core Web API
+  ↓
+Dapper
+  ↓
+SQL Server
