@@ -1,0 +1,687 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #212529;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: linear-gradient(
+    135deg,
+    #172554 0%,
+    #1f3c88 50%,
+    #2563eb 100%
+  );
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.login-icon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  border-radius: 50%;
+  font-size: 36px;
+}
+
+.login-card h1 {
+  margin: 0;
+  color: #1f3c88;
+  font-size: 30px;
+}
+
+.login-subtitle {
+  margin: 8px 0 30px;
+  color: #6c757d;
+  font-size: 15px;
+}
+
+.login-field {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.login-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.login-field input:focus {
+  border-color: #1f3c88;
+  box-shadow: 0 0 0 3px rgba(31, 60, 136, 0.1);
+}
+
+.login-button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #1f3c88;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.login-button:hover {
+  background: #162f6b;
+  transform: translateY(-1px);
+}
+
+.login-error {
+  padding: 11px;
+  margin: 0 0 15px;
+  border-radius: 7px;
+  background: #f8d7da;
+  border: 1px solid #f5c2c7;
+  color: #842029;
+  font-size: 14px;
+}
+
+.login-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+  color: #868e96;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   APPLICATION
+========================================================= */
+
+.app-wrapper {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   TOP NAVBAR
+========================================================= */
+
+.top-navbar {
+  width: 100%;
+  min-height: 72px;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f3c88;
+  color: white;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.top-navbar h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.top-navbar span {
+  display: block;
+  margin-top: 3px;
+  color: #dbe4ff;
+  font-size: 12px;
+}
+
+.logout-button {
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.logout-button:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+  width: 92%;
+  max-width: 1250px;
+  margin: 30px auto 50px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #1f3c88;
+  font-size: 30px;
+}
+
+.header p {
+  margin: 7px 0 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   DASHBOARD CARDS
+========================================================= */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.dashboard-card {
+  position: relative;
+  padding: 22px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e9f2;
+  box-shadow: 0 4px 14px rgba(31, 60, 136, 0.07);
+  transition: 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(31, 60, 136, 0.12);
+}
+
+.card-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #eef2ff;
+  font-size: 22px;
+}
+
+.dashboard-card h3 {
+  margin: 0 0 8px;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dashboard-card h2 {
+  margin: 0;
+  color: #1f3c88;
+  font-size: 30px;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: white;
+  border: 1px solid #e5e9f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #1f3c88;
+  font-size: 22px;
+}
+
+.section-header p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   MANAGEMENT FORM
+========================================================= */
+
+.management-form {
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #f8f9fc;
+  border: 1px solid #e8ebf2;
+  border-radius: 10px;
+}
+
+.management-form h3 {
+  margin: 0 0 15px;
+  color: #333;
+  font-size: 17px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.management-form input,
+.management-form select {
+  flex: 1;
+  min-width: 170px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 7px;
+  outline: none;
+  background: white;
+  color: #333;
+  font-size: 14px;
+}
+
+.management-form input:focus,
+.management-form select:focus {
+  border-color: #1f3c88;
+  box-shadow: 0 0 0 3px rgba(31, 60, 136, 0.08);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.add-button {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 7px;
+  background: #198754;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.add-button:hover {
+  background: #157347;
+}
+
+.cancel-button {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 7px;
+  background: #6c757d;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cancel-button:hover {
+  background: #5c636a;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box {
+  width: 100%;
+  padding: 13px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 7px;
+  outline: none;
+  background: white;
+  font-size: 14px;
+}
+
+.search-box:focus {
+  border-color: #1f3c88;
+  box-shadow: 0 0 0 3px rgba(31, 60, 136, 0.08);
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error {
+  padding: 12px 14px;
+  margin: 0 0 15px;
+  border: 1px solid #f5c2c7;
+  border-radius: 7px;
+  background: #f8d7da;
+  color: #842029;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e1e5eb;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  background: white;
+}
+
+thead {
+  background: #1f3c88;
+  color: white;
+}
+
+th {
+  padding: 13px 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+  color: #343a40;
+  font-size: 13px;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+tbody tr:hover {
+  background: #eef2ff;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.action-buttons {
+  white-space: nowrap;
+}
+
+.edit-button,
+.delete-button {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.edit-button {
+  margin-right: 5px;
+  background: #ffc107;
+  color: #212529;
+}
+
+.edit-button:hover {
+  background: #e0a800;
+}
+
+.delete-button {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #bb2d3b;
+}
+
+
+/* =========================================================
+   NO DATA
+========================================================= */
+
+.no-data {
+  padding: 25px;
+  color: #777;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px;
+  color: #777;
+  font-size: 12px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer span {
+  color: #1f3c88;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    width: 94%;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .management-form input,
+  .management-form select {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .login-page {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 30px 22px;
+  }
+
+  .top-navbar {
+    padding: 12px 20px;
+  }
+
+  .top-navbar h2 {
+    font-size: 19px;
+  }
+
+  .top-navbar span {
+    font-size: 11px;
+  }
+
+  .logout-button {
+    padding: 8px 13px;
+    font-size: 12px;
+  }
+
+  .container {
+    width: 94%;
+    margin: 20px auto 35px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 12px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dashboard-card {
+    padding: 18px;
+  }
+
+  .section {
+    padding: 17px;
+  }
+
+  .section-header h2 {
+    font-size: 19px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .management-form input,
+  .management-form select,
+  .add-button,
+  .cancel-button {
+    width: 100%;
+  }
+
+  .search-box {
+    font-size: 13px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .login-card {
+    padding: 25px 18px;
+  }
+
+  .login-card h1 {
+    font-size: 25px;
+  }
+
+  .container {
+    width: 96%;
+  }
+
+  .section {
+    padding: 13px;
+  }
+}
